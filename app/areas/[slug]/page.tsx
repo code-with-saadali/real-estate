@@ -40,7 +40,7 @@ export default async function AreaPage({
           Search this collection
         </ActionLink>
       </PageIntro>
-      <div className="site-shell pb-24">
+      <div className="w-full px-4 md:px-8 lg:px-16 pb-24">
         <div className="relative h-[60svh] min-h-80">
           <Image
             src={`/images/vistelya/${area.image}.webp`}
@@ -52,7 +52,7 @@ export default async function AreaPage({
           />
         </div>
         <div className="my-12 grid gap-7 border-b border-black/15 pb-12 md:grid-cols-2">
-          <h2 className="text-3xl sm:text-5xl">
+          <h2 className="text-3xl md:text-5xl">
             A place to
             <br />
             make your own.

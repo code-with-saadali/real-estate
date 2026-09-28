@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 export default function PropertiesPage() {
   return (
     <main>
-      <header className="site-shell pb-6 pt-28 sm:pb-8 sm:pt-32">
-        <h1 className="text-3xl leading-tight sm:text-4xl">Find your next home.</h1>
-        <p className="font mt-3 max-w-xl text-xs leading-relaxed text-black/60 sm:text-sm">
+      <header className="w-full px-4 md:px-8 lg:px-16 pb-6 pt-28 md:pb-8 md:pt-32">
+        <h1 className="text-3xl leading-tight md:text-4xl">Find your next home.</h1>
+        <p className="font mt-3 max-w-xl text-xs leading-relaxed text-black/60 md:text-sm">
           Explore homes by location, space, and the way you want to live.
         </p>
       </header>
-      <section className="site-shell pb-16" aria-label="Property search">
+      <section className="w-full px-4 md:px-8 lg:px-16 pb-16" aria-label="Property search">
         <Suspense fallback={<p className="font py-12" role="status">Preparing the collection...</p>}>
           <PropertyExplorer />
         </Suspense>

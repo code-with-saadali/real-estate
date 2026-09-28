@@ -28,9 +28,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${poppins.variable} h-full antialiased`}
+      className={`${cinzel.variable} ${poppins.variable} h-full font-serif antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#efefef] text-[#1c1c1a] has-[[aria-label='Property_actions']]:pb-[calc(80px+env(safe-area-inset-bottom))] md:has-[[aria-label='Property_actions']]:pb-0 [&_:is(button,a,input,select,textarea)]:[-webkit-tap-highlight-color:transparent] [&_:focus-visible]:outline-2 [&_:focus-visible]:outline-solid [&_:focus-visible]:outline-[#8a7045] [&_:focus-visible]:outline-offset-4">
         <SmoothScroll />
         <Navbar />
         {children}

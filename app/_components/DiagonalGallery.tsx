@@ -55,7 +55,7 @@ function GalleryPhoto({
 
   return (
     <motion.figure
-      className="hero-gallery-photo absolute top-1/2 left-1/2"
+      className="w-[68vw] h-[34svh] md:w-[clamp(220px,36vw,620px)] md:h-[44svh] absolute top-1/2 left-1/2"
       style={{ x, y }}
     >
       <div className="relative h-full w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-[#d7d5cf] shadow-2xl">
@@ -63,7 +63,7 @@ function GalleryPhoto({
           src={photo.src}
           alt={photo.alt}
           fill
-          sizes="(max-width: 639px) 68vw, 36vw"
+          sizes="(max-width: 767px) 68vw, 36vw"
           className="object-cover"
         />
       </div>
@@ -78,7 +78,7 @@ export default function DiagonalGallery({
 }) {
   return (
     <div
-      className="hero-gallery pointer-events-none absolute inset-0 z-20 overflow-hidden"
+      className="motion-reduce:hidden pointer-events-none absolute inset-0 z-20 overflow-hidden"
       role="group"
       aria-label="Vistelya property collection"
     >

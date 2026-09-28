@@ -179,7 +179,7 @@ function Navbar() {
       <header
         className="border-b border-black/5 bg-[#EFEFEF] absolute left-0 top-0 z-50 w-full transition-all duration-500 backdrop-blur-xl"
       >
-        <div className="mx-auto flex h-18.5 max-w-[1600px] items-center justify-between px-4 sm:px-7 lg:h-21 lg:px-10 xl:px-14">
+        <div className="mx-auto flex h-18.5 items-center justify-between px-4 md:px-8 lg:h-21 lg:px-16">
           {/* DESKTOP LEFT */}
           <nav className="hidden flex-1 items-center gap-8 lg:flex">
             {navLinks.map((item) =>
@@ -286,7 +286,7 @@ function Navbar() {
           >
             <FiMenu className="text-[19px]" />
 
-            <span className="hidden text-[11px] font-medium uppercase sm:block">
+            <span className="hidden text-[11px] font-medium uppercase md:block">
               Menu
             </span>
           </button>
@@ -314,7 +314,7 @@ function Navbar() {
             <Link
               href="/properties#property-search"
               aria-label="Search"
-              className="hidden h-10 w-10 items-center justify-center border border-black/10 text-[#1C1C1A] transition-all duration-300 hover:border-black hover:bg-[#1C1C1A] hover:text-white sm:flex"
+              className="hidden h-10 w-10 items-center justify-center border border-black/10 text-[#1C1C1A] transition-all duration-300 hover:border-black hover:bg-[#1C1C1A] hover:text-white md:flex"
             >
               <FiSearch className="text-[16px]" />
             </Link>
@@ -365,7 +365,7 @@ function Navbar() {
               className="absolute right-0 top-0 flex h-full w-full max-w-[620px] flex-col bg-[#F3F1EC]"
             >
               {/* MOBILE HEADER */}
-              <div className="flex h-[74px] shrink-0 items-center justify-between border-b border-black/[0.08] px-5 sm:h-[80px] sm:px-7">
+              <div className="flex h-[74px] shrink-0 items-center justify-between border-b border-black/[0.08] px-4 md:h-[80px] md:px-8 lg:px-16">
                 <Link
                   href="/"
                   onClick={() => setMenuOpen(false)}
@@ -384,7 +384,7 @@ function Navbar() {
               </div>
 
               {/* MOBILE CONTENT */}
-              <div data-lenis-prevent className="flex flex-1 flex-col overflow-y-auto px-5 pb-5 pt-7 sm:px-7 sm:pt-9">
+              <div data-lenis-prevent className="flex flex-1 flex-col overflow-y-auto px-4 pb-5 pt-7 md:px-8 md:pt-9 lg:px-16">
                 {/* TOP LABEL */}
                 <motion.div
                   initial={{
@@ -426,14 +426,14 @@ function Navbar() {
                       <Link
                         href={item.href}
                         onClick={() => setMenuOpen(false)}
-                        className="group relative flex items-center justify-between border-b border-black/[0.08] py-[15px] sm:py-[17px]"
+                        className="group relative flex items-center justify-between border-b border-black/[0.08] py-[15px] md:py-[17px]"
                       >
                         <div className="flex items-start gap-4">
                           <span className="mt-1 text-[9px] font-medium text-black/30">
                             {item.number}
                           </span>
 
-                          <span className="text-[25px] font-medium text-[#1C1C1A] sm:text-[31px]">
+                          <span className="text-[25px] font-medium text-[#1C1C1A] md:text-[31px]">
                             {item.label}
                           </span>
                         </div>
@@ -468,7 +468,7 @@ function Navbar() {
                   <Link
                     href="/contact"
                     onClick={() => setMenuOpen(false)}
-                    className="group flex items-center justify-between bg-[#1C1C1A] px-5 py-5 text-white sm:px-6 sm:py-6"
+                    className="group flex items-center justify-between bg-[#1C1C1A] px-5 py-5 text-white md:px-6 md:py-6"
                   >
                     <div>
                       <p className="text-[9px] font-medium uppercase text-white/45">

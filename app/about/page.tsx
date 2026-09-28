@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <header className="site-shell pb-6 pt-28 sm:pb-8 sm:pt-32">
-        <h1 className="text-3xl leading-tight sm:text-4xl">
+      <header className="w-full px-4 md:px-8 lg:px-16 pb-6 pt-28 md:pb-8 md:pt-32">
+        <h1 className="text-3xl leading-tight md:text-4xl">
           A thoughtful approach to home.
         </h1>
-        <p className="font mt-3 max-w-xl text-xs leading-relaxed text-black/60 sm:text-sm">
+        <p className="font mt-3 max-w-xl text-xs leading-relaxed text-black/60 md:text-sm">
           Beautiful spaces, natural surroundings, and a place to feel at home.
         </p>
       </header>
-      <div className="site-shell pb-24">
+      <div className="w-full px-4 md:px-8 lg:px-16 pb-24">
         <div className="relative h-[62svh] min-h-80">
           <Image
             src="/images/vistelya/courtyard.webp"
@@ -30,7 +30,7 @@ export default function AboutPage() {
           />
         </div>
         <Reveal className="grid gap-10 py-20 lg:grid-cols-2 lg:gap-24">
-          <h2 className="text-4xl leading-tight sm:text-6xl">
+          <h2 className="text-4xl leading-tight md:text-6xl">
             A little less noise.
             <br />A little more meaning.
           </h2>
@@ -85,7 +85,7 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="mb-5 text-[10px] text-[#8A7045]">Your next chapter</p>
-            <h2 className="text-4xl leading-tight sm:text-5xl">
+            <h2 className="text-4xl leading-tight md:text-5xl">
               Begin with
               <br />a different view.
             </h2>

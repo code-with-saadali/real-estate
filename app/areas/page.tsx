@@ -22,7 +22,7 @@ export default function AreasPage() {
         }
         description="The view from your window is only the beginning. Explore three distinct settings, each with a character of its own."
       />
-      <div className="site-shell pb-24">
+      <div className="w-full px-4 md:px-8 lg:px-16 pb-24">
         <SampleNote>
           Illustrative area collections with AI-created imagery.
         </SampleNote>
@@ -45,7 +45,7 @@ export default function AreasPage() {
                   <p className="mb-5 text-[10px] text-[#8A7045]">
                     0{index + 1} / {area.mood}
                   </p>
-                  <h2 className="text-4xl sm:text-6xl">{area.name}</h2>
+                  <h2 className="text-4xl md:text-6xl">{area.name}</h2>
                   <p className="font my-7 text-sm leading-[1.9] text-black/65">
                     {area.description}
                   </p>
@@ -64,7 +64,7 @@ export default function AreasPage() {
             </Reveal>
           ))}
         </div>
-        <div className="mt-24 flex flex-col justify-between gap-7 border-y border-black/15 py-10 sm:flex-row sm:items-center">
+        <div className="mt-24 flex flex-col justify-between gap-7 border-y border-black/15 py-10 md:flex-row md:items-center">
           <h2 className="text-3xl">Still finding your setting?</h2>
           <ActionLink href="/properties" light>
             Explore every home

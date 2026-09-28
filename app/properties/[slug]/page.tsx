@@ -31,7 +31,7 @@ export default async function PropertyPage({
   const property = properties.find((item) => item.slug === slug);
   if (!property) notFound();
   return (
-    <main className="site-shell pb-24 pt-32 sm:pt-40">
+    <main className="w-full px-4 md:px-8 lg:px-16 pb-24 pt-32 md:pt-40">
       <RecordPropertyView slug={property.slug} />
       <Link
         href="/properties"
@@ -81,7 +81,7 @@ export default async function PropertyPage({
           <p className="font max-w-2xl text-sm leading-[1.9] text-black/65">
             {property.description}
           </p>
-          <ul className="font mt-8 grid gap-4 text-xs sm:grid-cols-2">
+          <ul className="font mt-8 grid gap-4 text-xs md:grid-cols-2">
             {property.features.map((feature) => (
               <li key={feature} className="flex items-center gap-3">
                 <FiCheck aria-hidden="true" className="text-[#8A7045]" />
@@ -115,7 +115,7 @@ export default async function PropertyPage({
       </div>
       <div
         aria-label="Property actions"
-        className="font fixed inset-x-0 bottom-0 z-40 flex items-center justify-between gap-3 border-t border-black/10 bg-[#fafaf7]/95 px-5 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-lg md:hidden"
+        className="font fixed inset-x-0 bottom-0 z-40 flex items-center justify-between gap-3 border-t border-black/10 bg-[#fafaf7]/95 px-4 md:px-8 lg:px-16 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-lg md:hidden"
       >
         <FavouriteButton slug={property.slug} title={property.title} />
         <Link

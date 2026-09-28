@@ -14,7 +14,7 @@ export function PageIntro({
   children?: ReactNode;
 }) {
   return (
-    <header className="site-shell pb-12 pt-36 sm:pb-16 sm:pt-44">
+    <header className="w-full px-4 md:px-8 lg:px-16 pb-12 pt-36 md:pb-16 md:pt-44">
       <div className="mb-10 flex items-center justify-between border-t border-black/10 pt-5 text-[10px] text-black/55">
         <span>{eyebrow}</span>
         <Link href="/" className="hover:text-black">

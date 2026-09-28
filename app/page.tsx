@@ -10,7 +10,7 @@ import RecentlyViewed from "./_components/RecentlyViewed";
 
 export default function Home() {
   return (
-    <div id="home" className="bg-[#EFEFEF] min-h-screen">
+    <div id="home" className="bg-[#EFEFEF] min-h-svh">
       <main>
         <Hero />
         <FeaturedResidences />

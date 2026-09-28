@@ -64,7 +64,7 @@ function ResidenceCard({
 
   return (
     <motion.article
-      className="residence-card absolute inset-x-0 top-0 h-full origin-top overflow-hidden bg-[#343831]"
+      className="motion-reduce:relative motion-reduce:h-[65svh] motion-reduce:transform-none absolute inset-x-0 top-0 h-full origin-top overflow-hidden bg-[#343831]"
       style={
         reducedMotion
           ? undefined
@@ -83,20 +83,20 @@ function ResidenceCard({
           src={residence.image}
           alt={residence.alt}
           fill
-          sizes="(max-width: 639px) 92vw, 90vw"
+          sizes="(max-width: 767px) 92vw, 90vw"
           className="object-cover"
         />
       </motion.div>
       <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-black/15" />
-      <div className="absolute inset-x-5 top-5 flex items-center justify-between text-[10px] text-white sm:inset-x-9 sm:top-8 sm:text-xs">
+      <div className="absolute inset-x-5 top-5 flex items-center justify-between text-[10px] text-white md:inset-x-9 md:top-8 md:text-xs">
         <span>{residence.category}</span>
         <span>0{index + 1} / 03</span>
       </div>
-      <div className="absolute inset-x-5 bottom-7 text-white sm:inset-x-9 sm:bottom-10 lg:inset-x-12">
+      <div className="absolute inset-x-5 bottom-7 text-white md:inset-x-9 md:bottom-10 lg:inset-x-12">
         <h3 className="text-[clamp(2rem,5vw,5.5rem)] leading-[1.1] font-normal">
           {residence.title}
         </h3>
-        <p className="font mt-4 max-w-lg text-xs leading-relaxed text-white/80 sm:text-sm">
+        <p className="font mt-4 max-w-lg text-xs leading-relaxed text-white/80 md:text-sm">
           {residence.description}
         </p>
       </div>
@@ -121,13 +121,13 @@ export default function FeaturedResidences() {
     <section
       id="featured-residences"
       ref={section}
-      className="featured-residences relative bg-[#EFEFEF]"
+      className="h-[340svh] motion-reduce:h-auto relative bg-[#EFEFEF]"
       aria-labelledby="residences-title"
     >
-      <div className="residences-stage sticky top-0 h-svh overflow-hidden px-4 sm:px-8 lg:px-16">
-        <header className="flex h-[25svh] items-center justify-between gap-6">
+      <div className="motion-reduce:h-auto motion-reduce:relative motion-reduce:block sticky top-0 grid h-svh grid-rows-[25%_minmax(0,1fr)_7%] overflow-hidden px-4 md:px-8 lg:px-16">
+        <header className="flex min-h-0 items-center motion-reduce:py-8 justify-between gap-6">
           <div>
-            <p className="mb-3 text-[10px] text-[#8A7045] sm:text-xs">
+            <p className="mb-3 text-[10px] text-[#8A7045] md:text-xs">
               Selected by Vistelya
             </p>
             <h2
@@ -139,7 +139,7 @@ export default function FeaturedResidences() {
           </div>
           <Link
             href="/properties"
-            className="group inline-flex shrink-0 items-center gap-2 bg-[#1C1C1A] px-4 py-3 text-[10px] font-medium text-white transition-colors duration-300 hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black sm:px-5 sm:text-xs"
+            className="group inline-flex shrink-0 items-center gap-2 bg-[#1C1C1A] px-4 py-3 text-[10px] font-medium text-white transition-colors duration-300 hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black md:px-5 md:text-xs"
           >
             View all{" "}
             <FiArrowUpRight
@@ -148,7 +148,7 @@ export default function FeaturedResidences() {
             />
           </Link>
         </header>
-        <div className="residences-cards relative h-[68svh] overflow-hidden">
+        <div className="motion-reduce:h-auto motion-reduce:grid motion-reduce:gap-5 relative min-h-0 overflow-hidden">
           {residences.map((residence, index) => (
             <ResidenceCard
               key={residence.title}
@@ -159,7 +159,7 @@ export default function FeaturedResidences() {
             />
           ))}
         </div>
-        <div className="flex h-[7svh] items-center justify-between gap-4 text-[9px] text-[#1C1C1A]/60 sm:text-[11px]">
+        <div className="flex min-h-0 items-center motion-reduce:py-4 justify-between gap-4 text-[9px] text-[#1C1C1A]/60 md:text-[11px]">
           <span className="font">
             Distinctive homes. Thoughtfully selected.
           </span>

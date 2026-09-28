@@ -11,15 +11,15 @@ export const metadata: Metadata = {
 export default function AgentsPage() {
   return (
     <main>
-      <header className="site-shell pb-6 pt-28 sm:pb-8 sm:pt-32">
-        <h1 className="text-3xl leading-tight sm:text-4xl">
+      <header className="w-full px-4 md:px-8 lg:px-16 pb-6 pt-28 md:pb-8 md:pt-32">
+        <h1 className="text-3xl leading-tight md:text-4xl">
           Meet our advisors.
         </h1>
-        <p className="font mt-3 max-w-xl text-xs leading-relaxed text-black/60 sm:text-sm">
+        <p className="font mt-3 max-w-xl text-xs leading-relaxed text-black/60 md:text-sm">
           Explore the advisor profiles created for the Vistelya collection.
         </p>
       </header>
-      <section className="site-shell pb-24" aria-label="Advisor profiles">
+      <section className="w-full px-4 md:px-8 lg:px-16 pb-24" aria-label="Advisor profiles">
         <SampleNote>
           Illustrative team profiles. Names and roles are placeholders, not
           active agents.

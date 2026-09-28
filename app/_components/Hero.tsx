@@ -34,8 +34,16 @@ export default function Hero() {
   const rightX = useTransform(expansionProgress, [0, 0.45], ["0%", "125%"]);
   const sideY = useTransform(expansionProgress, [0, 0.45], ["0%", "-18%"]);
   const sideOpacity = useTransform(expansionProgress, [0.24, 0.45], [1, 0]);
-  const titleY = useTransform(expansionProgress, [0, 0.45], ["0svh", "-100svh"]);
-  const galleryTarget = useTransform(scrollYProgress, [178.75 / 616, 1], [0, 1]);
+  const titleY = useTransform(
+    expansionProgress,
+    [0, 0.45],
+    ["0svh", "-100svh"],
+  );
+  const galleryTarget = useTransform(
+    scrollYProgress,
+    [178.75 / 616, 1],
+    [0, 1],
+  );
   const galleryProgress = useSpring(galleryTarget, {
     stiffness: 55,
     damping: 24,
@@ -45,39 +53,42 @@ export default function Hero() {
   return (
     <section
       ref={section}
-      className="property-hero relative"
+      className="h-[716svh] motion-reduce:h-auto relative"
       aria-labelledby="hero-title"
     >
-      <div className="property-hero-stage pointer-events-none  sticky top-0 z-60 h-svh overflow-hidden">
+      <div className="motion-reduce:relative motion-reduce:h-auto motion-reduce:min-h-svh motion-reduce:px-4 md:motion-reduce:px-8 lg:motion-reduce:px-16 motion-reduce:pt-35 motion-reduce:pb-8 motion-reduce:grid motion-reduce:grid-cols-2 motion-reduce:gap-4 pointer-events-none  sticky top-0 z-60 h-svh overflow-hidden">
         <motion.div
-          className="property-hero-copy absolute inset-x-0 top-[19%] px-5 text-center"
+          className="motion-reduce:static motion-reduce:col-span-full motion-reduce:px-0! motion-reduce:pt-0 motion-reduce:pb-8 absolute inset-x-0 top-[22%] md:top-[19%] px-4 md:px-8 lg:px-16 text-center"
           style={reducedMotion ? undefined : { y: titleY }}
         >
           <h1
             id="hero-title"
-            className="text-[clamp(2.25rem,5.7vw,7rem)] leading-[1.13] font-extralight uppercase text-[#1C1C1A]"
+            className="text-[clamp(1.65rem,6.1vw,2.5rem)] leading-tight md:text-[clamp(2.25rem,5.7vw,7rem)] md:leading-[1.13] font-extralight uppercase text-[#1C1C1A]"
           >
             Luxury Residences <br /> in Swiss
           </h1>
           <Link
             href="/properties"
-            className="group pointer-events-auto mt-8 inline-flex items-center gap-2 bg-[#1C1C1A] px-5 py-3 text-[12px] font-medium text-white transition-colors duration-300 hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1C1C1A] sm:mt-10"
+            className="group pointer-events-auto mt-8 inline-flex items-center gap-2 bg-[#1C1C1A] px-5 py-3 text-[12px] font-medium text-white transition-colors duration-300 hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1C1C1A] md:mt-10"
           >
             Explore properties
-            <FiArrowUpRight aria-hidden="true" className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <FiArrowUpRight
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
           </Link>
         </motion.div>
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-5 top-[54%] flex justify-between text-2xl font-extralight text-black/20 sm:inset-x-8"
+          className="pointer-events-none absolute inset-x-4 top-[54%] flex justify-between text-2xl font-extralight text-black/20 md:inset-x-8 lg:inset-x-16"
         >
           <FiPlus />
           <FiPlus />
         </div>
 
         <motion.div
-          className="property-hero-side absolute top-[82%] left-0 h-[45%] w-[25%] overflow-hidden bg-[#d7d5cf]"
+          className="motion-reduce:relative motion-reduce:inset-auto motion-reduce:w-full motion-reduce:h-[32svh] motion-reduce:transform-none absolute top-[82%] left-0 h-[45%] w-[25%] overflow-hidden bg-[#d7d5cf]"
           style={
             reducedMotion
               ? undefined
@@ -93,7 +104,7 @@ export default function Hero() {
           />
         </motion.div>
         <motion.div
-          className="property-hero-side absolute top-[82%] right-0 h-[45%] w-[25%] overflow-hidden bg-[#d7d5cf]"
+          className="motion-reduce:relative motion-reduce:inset-auto motion-reduce:w-full motion-reduce:h-[32svh] motion-reduce:transform-none absolute top-[82%] right-0 h-[45%] w-[25%] overflow-hidden bg-[#d7d5cf]"
           style={
             reducedMotion
               ? undefined
@@ -109,7 +120,7 @@ export default function Hero() {
           />
         </motion.div>
         <motion.div
-          className="property-hero-center absolute top-[65%] left-1/2 z-10 h-[64%] w-[40%] -translate-x-1/2 overflow-hidden bg-[#d7d5cf]"
+          className="motion-reduce:relative motion-reduce:inset-auto motion-reduce:w-full motion-reduce:h-[55svh] motion-reduce:transform-none motion-reduce:translate-x-0 motion-reduce:col-span-full absolute top-[65%] left-1/2 z-10 h-[64%] w-[40%] -translate-x-1/2 overflow-hidden bg-[#d7d5cf]"
           style={reducedMotion ? undefined : { width, top, height }}
         >
           <Image

@@ -27,15 +27,15 @@ export default async function ContactPage({
       : "buy";
   return (
     <main>
-      <header className="site-shell pb-6 pt-28 sm:pb-8 sm:pt-32">
-        <h1 className="text-3xl leading-tight sm:text-4xl">
+      <header className="w-full px-4 md:px-8 lg:px-16 pb-6 pt-28 md:pb-8 md:pt-32">
+        <h1 className="text-3xl leading-tight md:text-4xl">
           Let’s find your next home.
         </h1>
-        <p className="font mt-3 max-w-xl text-xs leading-relaxed text-black/60 sm:text-sm">
+        <p className="font mt-3 max-w-xl text-xs leading-relaxed text-black/60 md:text-sm">
           Tell us what you’re looking for and prepare your enquiry.
         </p>
       </header>
-      <div className="site-shell grid items-start gap-12 pb-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+      <div className="w-full px-4 md:px-8 lg:px-16 grid items-start gap-12 pb-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <aside>
           <div className="relative aspect-4/5 max-h-150">
             <Image
