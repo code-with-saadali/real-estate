@@ -1,0 +1,40 @@
+"use client";
+
+import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { FiSearch, FiArrowRight, FiHeart } from "react-icons/fi";
+import { areas, properties } from "../_lib/collection";
+import { filterProperties } from "../_lib/filter-properties";
+import { useFavourites } from "../_lib/favourites";
+import PropertyCard from "./PropertyCard";
+
+const categories = [["all", "All homes"], ["sale", "For sale"], ["rent", "For rent"], ["new", "New developments"], ["luxury", "Luxury collection"]];
+
+export default function PropertyExplorer() {
+  const params = useSearchParams();
+  const { saved } = useFavourites();
+  const savedOnly = params.get("saved") === "1";
+  const router = useRouter();
+  const type = params.get("type") ?? "all";
+  const query = params.get("q") ?? "";
+  const area = params.get("area") ?? "";
+  const beds = params.get("beds") ?? "";
+  const sort = ["sale", "rent", "new"].includes(type) || params.get("sort") === "size" ? params.get("sort") ?? "featured" : "featured";
+  const results = filterProperties(properties, { type, query, area, beds, sort }).filter((property) => !savedOnly || saved.includes(property.slug));
+  function update(key: string, value: string) {
+    const next = new URLSearchParams(params.toString());
+    if (key === "type") { next.delete("sort"); next.delete("saved"); }
+    if (value && value !== "all" && value !== "featured") next.set(key, value);
+    else next.delete(key);
+    router.replace(`/properties${next.size ? `?${next}` : ""}`, { scroll: false });
+  }
+  return <div id="saved-homes" className="scroll-mt-8"><div role="group" aria-label="Property category" className="flex flex-nowrap gap-2 overflow-x-auto border-y border-black/10 py-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap">{categories.map(([value, label]) => <button key={value} type="button" onClick={() => update("type", value)} aria-pressed={!savedOnly && type === value} className={`shrink-0 whitespace-nowrap px-4 py-3 text-[11px] transition-colors ${!savedOnly && type === value ? "bg-[#1C1C1A] text-white" : "border border-black/15 hover:bg-black/5"}`}>{label}</button>)}<button type="button" aria-pressed={savedOnly} onClick={() => router.replace(savedOnly ? "/properties" : "/properties?saved=1", { scroll: false })} className={`font inline-flex min-h-11 shrink-0 whitespace-nowrap items-center justify-center gap-2 rounded-full border px-5 py-3 text-xs transition-colors ${savedOnly ? "border-[#1c1c1a] bg-[#1c1c1a] text-white" : "border-[#8a7045]/30 bg-[#e9e7df] hover:bg-[#dedbcf]"}`}><FiHeart aria-hidden="true" className="text-base" />Saved homes ({properties.filter((property) => saved.includes(property.slug)).length})</button></div>
+    <div className="font grid gap-4 py-6 md:grid-cols-[2fr_1fr_1fr]">
+      <form key={query} onSubmit={(event) => { event.preventDefault(); update("q", new FormData(event.currentTarget).get("q")?.toString().trim() ?? ""); }} className="flex items-end gap-2"><label className="block flex-1 text-[11px]" htmlFor="property-search">Search homes<div className="mt-2 flex items-center rounded-lg border border-black/20 bg-white/60 px-3 transition-colors hover:border-black/35 focus-within:border-[#1c1c1a]/60 focus-within:bg-white focus-within:ring-2 focus-within:ring-black/10"><FiSearch aria-hidden="true" className="shrink-0 text-black/50" /><input id="property-search" name="q" defaultValue={query} placeholder="Location, home, or feature" className="min-w-0 w-full border-0 bg-transparent p-3 text-xs shadow-none outline-none placeholder:text-black/40 focus:ring-0 focus-visible:outline-none" /></div></label><button aria-label="Search properties" type="submit" className="flex h-[44px] w-11 items-center justify-center bg-[#1C1C1A] text-white"><FiArrowRight aria-hidden="true" /></button></form>
+      <label className="text-[11px]">Area<select value={area} onChange={(event) => update("area", event.target.value)} className="custom-select mt-2 text-xs"><option value="">All areas</option>{areas.map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}</select></label>
+      <label className="text-[11px]">Bedrooms<select value={beds} onChange={(event) => update("beds", event.target.value)} className="custom-select mt-2 text-xs"><option value="">Any bedrooms</option><option value="2">2+ bedrooms</option><option value="3">3+ bedrooms</option><option value="4">4+ bedrooms</option><option value="5">5+ bedrooms</option></select></label>
+    </div>
+    <div className="font mb-8 flex flex-wrap items-center justify-between gap-4 text-xs"><p role="status">{results.length} {results.length === 1 ? "home" : "homes"} {savedOnly ? "in your saved homes" : "in this collection"}</p><label className="flex items-center gap-3 whitespace-nowrap">Sort by<select value={sort} onChange={(event) => update("sort", event.target.value)} className="custom-select min-w-44 text-xs"><option value="featured">Featured</option><option value="size">Largest first</option>{type === "sale" || type === "rent" || type === "new" ? <><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></> : null}</select></label></div>
+    {results.length ? <div className="grid gap-x-7 gap-y-12 md:grid-cols-2 xl:grid-cols-3">{results.map((property) => <PropertyCard key={property.slug} property={property} />)}</div> : <div className="border border-black/15 px-6 py-20 text-center"><h2 className="text-3xl">{savedOnly ? "No saved homes to show." : "A different search, perhaps."}</h2><p className="font mx-auto mt-4 max-w-md text-sm leading-relaxed text-black/60">{savedOnly ? "Tap the heart on a home to save it. Your favourites will appear here in this browser." : "No sample homes match these filters. Try another location or widen your search."}</p><Link href="/properties" className="mt-7 inline-block bg-[#1C1C1A] px-6 py-3 text-xs text-white">{savedOnly ? "Explore homes" : "Reset filters"}</Link></div>}
+  </div>;
+}

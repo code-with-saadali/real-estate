@@ -1,1 +1,223 @@
 @import "tailwindcss";
+
+@utility font {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+@utility site-shell {
+  width: min(100%, 1728px);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 64px);
+}
+
+@utility form-field {
+  @apply block w-full rounded-lg border border-black/20 bg-white/60 px-4 py-3 text-sm text-[#1c1c1a] shadow-none outline-none transition-colors placeholder:text-black/40 hover:border-black/35 focus:border-[#1c1c1a]/60 focus:bg-white focus:ring-2 focus:ring-black/10 focus-visible:outline-none;
+}
+
+@utility custom-select {
+  @apply form-field cursor-pointer appearance-none pr-11;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2352524d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+
+  /* Keep native keyboard/mobile behavior, with a custom popup where supported. */
+  @supports (appearance: base-select) {
+    appearance: base-select;
+
+    &::picker(select) {
+      appearance: base-select;
+      @apply my-2 max-h-72 rounded-xl border border-black/10 bg-[#fafaf7] p-1.5 text-sm text-[#1c1c1a] shadow-xl;
+    }
+
+    &::picker-icon { display: none; }
+
+    & option {
+      @apply cursor-pointer rounded-md px-3 py-3 transition-colors;
+    }
+
+    & option:hover,
+    & option:focus {
+      @apply bg-black/5 outline-none;
+    }
+
+    & option:checked {
+      @apply bg-[#e9e7df] font-medium;
+    }
+
+    & option::checkmark {
+      @apply text-[#52524d];
+    }
+  }
+}
+
+@layer base {
+  body { background: #efefef; color: #1c1c1a; }
+  @media (max-width: 767px) {
+    body:has([aria-label="Property actions"]) { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+  }
+  button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 2px solid #8a7045; outline-offset: 4px; }
+}
+
+@theme inline {
+  --font-sans: var(--font-cinzel), serif;
+  --font-serif: var(--font-cinzel), serif;
+  --font-mono: var(--font-cinzel), serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-cinzel), serif;
+  }
+}
+
+.property-hero {
+  height: 716svh;
+}
+
+.featured-residences {
+  height: 340svh;
+}
+
+.inside-vistelya {
+  height: 320svh;
+}
+
+@media (max-height: 650px) and (max-width: 1023px) {
+  .inside-stage { padding-block: 4svh; }
+  .inside-layout { gap: 16px; }
+  .inside-intro h2 { font-size: 1.6rem; }
+  .inside-intro p { margin-bottom: 8px; }
+  .inside-photo { height: 38svh; }
+  .inside-progress { margin-top: 16px; }
+}
+
+.approach-editorial {
+  height: 210svh;
+}
+
+@media (max-width: 639px) {
+  .approach-editorial-title {
+    top: 18%;
+    font-size: clamp(3rem, 13vw, 5rem);
+  }
+
+  .approach-editorial-image {
+    top: 43%;
+    height: 45%;
+  }
+}
+
+@media (min-width: 640px) and (max-height: 700px) {
+  .approach-editorial-title {
+    font-size: min(9.2vw, 13svh);
+  }
+}
+
+.hero-gallery-photo {
+  width: clamp(220px, 36vw, 620px);
+  height: 44svh;
+}
+
+@media (max-width: 639px) {
+  .hero-gallery-photo {
+    width: 68vw;
+    height: 34svh;
+  }
+}
+
+@media (max-width: 639px) {
+  .property-hero-copy {
+    top: 22%;
+  }
+
+  .property-hero-copy h1 {
+    font-size: clamp(1.65rem, 6.1vw, 2.5rem);
+    line-height: 1.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inside-vistelya {
+    height: auto;
+  }
+
+  .inside-stage {
+    position: relative;
+    height: auto;
+  }
+
+  .inside-layout { display: block; }
+  .inside-intro { margin-bottom: 40px; }
+  .inside-track { display: grid; width: 100%; gap: 40px; transform: none; }
+  .inside-space { width: 100%; }
+  .inside-navigation, .inside-progress { display: none; }
+
+  .approach-editorial {
+    height: auto;
+  }
+
+  .approach-editorial-stage {
+    position: relative;
+    min-height: 640px;
+  }
+
+  .featured-residences,
+  .residences-stage,
+  .residences-cards {
+    height: auto;
+  }
+
+  .residences-stage {
+    position: relative;
+  }
+
+  .residences-cards {
+    display: grid;
+    gap: 20px;
+  }
+
+  .residence-card {
+    position: relative;
+    height: 65svh;
+    transform: none;
+  }
+
+  .hero-gallery {
+    display: none;
+  }
+
+  .property-hero {
+    height: auto;
+  }
+
+  .property-hero-stage {
+    position: relative;
+    height: auto;
+    min-height: 100svh;
+    padding: 140px 20px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .property-hero-copy {
+    position: static;
+    grid-column: 1 / -1;
+    padding: 0 0 32px;
+  }
+
+  .property-hero-side,
+  .property-hero-center {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 32svh;
+    transform: none;
+  }
+
+  .property-hero-center {
+    grid-column: 1 / -1;
+    height: 55svh;
+  }
+}

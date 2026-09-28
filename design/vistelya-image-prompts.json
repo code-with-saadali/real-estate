@@ -1,0 +1,60 @@
+{
+  "generator": "Built-in image_gen",
+  "note": "AI-generated architectural concept imagery for Vistelya.",
+  "assets": [
+    {
+      "name": "villa",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-12a7c5e6-cfe3-4f63-adcf-84981016768b.png",
+      "output": "public/images/vistelya/villa.webp",
+      "prompt": "Use case: photorealistic-natural. Create one premium architectural editorial photograph for Vistelya, a minimal luxury real-estate website with ivory backgrounds, charcoal Cinzel typography and muted brass accents. Wide landscape 3:2. Scene: a bespoke contemporary Swiss lakeside villa, pale travertine and ivory limewash volumes, slender dark bronze window frames, tranquil pale blue reflecting pool, distant hazy alpine lake and mountains, sculptural pine and restrained green planting. Refined quiet luxury, soft late-afternoon sunlight, realistic stone pores, gentle shadows, professional architectural photography, straight verticals. Entire building composed near center so portrait and landscape crops both work, generous foreground pool. Natural restrained colors, no vivid cyan, no orange cast. No people, no text, no logos, no watermark, no borders or collage. This is the actual website image asset, not a screenshot or mockup."
+    },
+    {
+      "name": "garden",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-b0e30630-0a47-49d4-8f3a-518218d19beb.png",
+      "output": "public/images/vistelya/garden.webp",
+      "prompt": "Use case: photorealistic-natural. Asset: one original landscape 3:2 architectural editorial photograph for Vistelya luxury real estate. Match this consistent art direction: warm ivory, honed pale travertine, charcoal bronze, muted sage greenery, softly desaturated natural daylight, restrained Swiss quiet luxury. Ultra-realistic materials, professional architectural camera, straight verticals, believable scale, beautifully composed central subject suitable for responsive crops. No people, writing, logos, watermarks, borders, collages or UI. Avoid bright orange, saturated cyan, excessive gold, glossy CGI. Scene: A secluded Swiss garden residence with pale limestone walls, dark bronze glazing, elegant broad steps, clipped hedges, soft grasses and a mature sculptural tree. Architectural exterior, three-quarter view."
+    },
+    {
+      "name": "living",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-09e689d5-2eda-4693-9673-48221c8445ae.png",
+      "output": "public/images/vistelya/living.webp",
+      "prompt": "Use case: photorealistic-natural. Asset: one original landscape 3:2 architectural editorial photograph for Vistelya luxury real estate. Match this consistent art direction: warm ivory, honed pale travertine, charcoal bronze, muted sage greenery, softly desaturated natural daylight, restrained Swiss quiet luxury. Ultra-realistic materials, professional architectural camera, straight verticals, believable scale, beautifully composed central subject suitable for responsive crops. No people, writing, logos, watermarks, borders, collages or UI. Avoid bright orange, saturated cyan, excessive gold, glossy CGI. Scene: An extraordinary double-height Swiss villa living room, ivory boucle sofas, low travertine coffee table, dark walnut details, bronze framed floor-to-ceiling glazing facing a misty alpine lake, soft linen curtains. Balanced, architectural wide interior."
+    },
+    {
+      "name": "courtyard",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-af141a3d-9c5a-4762-ab0a-e0c9ab4db509.png",
+      "output": "public/images/vistelya/courtyard.webp",
+      "prompt": "Use case: photorealistic-natural. Asset: one original landscape 3:2 architectural editorial photograph for Vistelya luxury real estate. Match this consistent art direction: warm ivory, honed pale travertine, charcoal bronze, muted sage greenery, softly desaturated natural daylight, restrained Swiss quiet luxury. Ultra-realistic materials, professional architectural camera, straight verticals, believable scale, beautifully composed central subject suitable for responsive crops. No people, writing, logos, watermarks, borders, collages or UI. Avoid bright orange, saturated cyan, excessive gold, glossy CGI. Scene: A serene private courtyard of a Swiss luxury home, travertine colonnade, shallow reflecting water, sculptural tree, cream stone walls with beautifully proportioned openings, dark bronze doors, soft shadows."
+    },
+    {
+      "name": "dining",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-e3e029c6-9525-426b-88ec-6a69aa93eda1.png",
+      "output": "public/images/vistelya/dining.webp",
+      "prompt": "Use case: photorealistic-natural. Asset: one original landscape 3:2 architectural editorial photograph for Vistelya luxury real estate. Match this consistent art direction: warm ivory, honed pale travertine, charcoal bronze, muted sage greenery, softly desaturated natural daylight, restrained Swiss quiet luxury. Ultra-realistic materials, professional architectural camera, straight verticals, believable scale, beautifully composed central subject suitable for responsive crops. No people, writing, logos, watermarks, borders, collages or UI. Avoid bright orange, saturated cyan, excessive gold, glossy CGI. Scene: A refined open plan dining room in a Swiss contemporary villa, oval pale oak dining table, six sculptural cream chairs, single understated bronze pendant, limewash walls, large window framing muted mountain greenery."
+    },
+    {
+      "name": "terrace",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-c789a6bc-fe3c-4a77-a377-39c15bcae7d1.png",
+      "output": "public/images/vistelya/terrace.webp",
+      "prompt": "Use case: photorealistic-natural. Asset: one original landscape 3:2 architectural editorial photograph for Vistelya luxury real estate. Match this consistent art direction: warm ivory, honed pale travertine, charcoal bronze, muted sage greenery, softly desaturated natural daylight, restrained Swiss quiet luxury. Ultra-realistic materials, professional architectural camera, straight verticals, believable scale, beautifully composed central subject suitable for responsive crops. No people, writing, logos, watermarks, borders, collages or UI. Avoid bright orange, saturated cyan, excessive gold, glossy CGI. Scene: A private Swiss lakeside terrace, ivory linen loungers, pale travertine paving, slim bronze railings, olive green gardens, still alpine lake in background, understated modern villa at edge of scene."
+    },
+    {
+      "name": "kitchen",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-eddb4101-0b5d-40a8-984a-4b9693885de8.png",
+      "output": "public/images/vistelya/kitchen.webp",
+      "prompt": "Use case: photorealistic-natural. Asset: one original landscape 3:2 architectural editorial photograph for Vistelya luxury real estate. Match this consistent art direction: warm ivory, honed pale travertine, charcoal bronze, muted sage greenery, softly desaturated natural daylight, restrained Swiss quiet luxury. Ultra-realistic materials, professional architectural camera, straight verticals, believable scale, beautifully composed central subject suitable for responsive crops. No people, writing, logos, watermarks, borders, collages or UI. Avoid bright orange, saturated cyan, excessive gold, glossy CGI. Scene: A sophisticated quiet luxury kitchen, monolithic honed cream travertine island, warm dark oak cabinets, understated brushed brass fixtures, one ceramic vase, integrated appliances, side daylight through bronze frame window."
+    },
+    {
+      "name": "estate",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-1bec2d45-8fda-4da4-a586-d260f9ec5f87.png",
+      "output": "public/images/vistelya/estate.webp",
+      "prompt": "Use case: photorealistic-natural. Asset: one original landscape 3:2 architectural editorial photograph for Vistelya luxury real estate. Match this consistent art direction: warm ivory, honed pale travertine, charcoal bronze, muted sage greenery, softly desaturated natural daylight, restrained Swiss quiet luxury. Ultra-realistic materials, professional architectural camera, straight verticals, believable scale, beautifully composed central subject suitable for responsive crops. No people, writing, logos, watermarks, borders, collages or UI. Avoid bright orange, saturated cyan, excessive gold, glossy CGI. Scene: A cinematic yet natural wide exterior of a luxurious Swiss hillside estate, layered ivory limestone architecture, vast dark bronze framed windows, serene garden lawn, pale stone stair, distant Alpine mountains and soft silver sky. Architectural editorial photograph."
+    },
+    {
+      "name": "suite",
+      "source": "C:\\Users\\Saad Ali\\.codex\\generated_images\\01a0e1df-a5d0-7aa0-8602-5b589a0875fd\\exec-b6f34525-d76d-4fb5-ab80-0d9fabd11b8f.png",
+      "output": "public/images/vistelya/suite.webp",
+      "prompt": "Use case: photorealistic-natural. Asset: one original landscape 3:2 architectural editorial photograph for Vistelya luxury real estate. Match this consistent art direction: warm ivory, honed pale travertine, charcoal bronze, muted sage greenery, softly desaturated natural daylight, restrained Swiss quiet luxury. Ultra-realistic materials, professional architectural camera, straight verticals, believable scale, beautifully composed central subject suitable for responsive crops. No people, writing, logos, watermarks, borders, collages or UI. Avoid bright orange, saturated cyan, excessive gold, glossy CGI. Scene: A calm luxurious bedroom suite in a Swiss villa, low ivory upholstered bed, linen bedding, warm walnut wall detail, sculptural bedside stone tables, bronze window frames with soft green lake view, peaceful daylight, no clutter."
+    }
+  ]
+}
