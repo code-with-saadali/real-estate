@@ -5,7 +5,7 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-cinzel), serif;
-  --font-serif: var(--font-cinzel), serif;
-  --font-mono: var(--font-cinzel), serif;
+  --font-sans: var(--font-playfair), serif;
+  --font-serif: var(--font-playfair), serif;
+  --font-mono: var(--font-playfair), serif;
 }

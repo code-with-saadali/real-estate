@@ -26,7 +26,7 @@ export default function Hero() {
     mass: 0.4,
   });
   // Preserve the original expansion distance while giving the gallery more scroll room.
-  const expansionProgress = useTransform(progress, [0, 325 / 616], [0, 1]);
+  const expansionProgress = useTransform(progress, [0, 325 / 1246], [0, 1]);
   const width = useTransform(expansionProgress, [0, 0.55], ["40%", "100%"]);
   const top = useTransform(expansionProgress, [0, 0.55], ["65%", "0%"]);
   const height = useTransform(expansionProgress, [0, 0.55], ["64%", "100%"]);
@@ -41,19 +41,21 @@ export default function Hero() {
   );
   const galleryTarget = useTransform(
     scrollYProgress,
-    [178.75 / 616, 1],
+    [178.75 / 1246, 1],
     [0, 1],
   );
   const galleryProgress = useSpring(galleryTarget, {
-    stiffness: 55,
-    damping: 24,
-    mass: 0.8,
+    stiffness: 36,
+    damping: 20,
+    mass: 1.4,
+    restDelta: 0.00001,
+    restSpeed: 0.00001,
   });
 
   return (
     <section
       ref={section}
-      className="h-[716svh] motion-reduce:h-auto relative"
+      className="h-[1346svh] motion-reduce:h-auto relative"
       aria-labelledby="hero-title"
     >
       <div className="motion-reduce:relative motion-reduce:h-auto motion-reduce:min-h-svh motion-reduce:px-4 md:motion-reduce:px-8 lg:motion-reduce:px-16 motion-reduce:pt-35 motion-reduce:pb-8 motion-reduce:grid motion-reduce:grid-cols-2 motion-reduce:gap-4 pointer-events-none  sticky top-0 z-60 h-svh overflow-hidden">
